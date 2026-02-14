@@ -1,0 +1,111 @@
+{
+  "games": [
+    {
+      "id": "game-one",
+      "title": "Featured Game One",
+      "tagline": "A strategic card game for 2–4 players.",
+      "shortDesc": "Quick to learn, deep to master.",
+      "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Game+1",
+      "heroImage": "https://placehold.co/1200x514/2d5a3d/ffffff?text=Game+One+Hero",
+      "about": "Replace this with your game's description. A few sentences on theme, player count, and what makes it special.",
+      "gameplay": "Brief overview of how the game plays: goal, turn structure, and key mechanics.",
+      "gameplayBullets": ["2–4 players, 30–45 minutes", "Card drafting and set collection", "Family-friendly with strategic depth"],
+      "gallery": [
+        "https://placehold.co/400x400/2d5a3d/ffffff?text=1",
+        "https://placehold.co/400x400/2d5a3d/ffffff?text=2",
+        "https://placehold.co/400x400/2d5a3d/ffffff?text=3",
+        "https://placehold.co/400x400/2d5a3d/ffffff?text=4"
+      ],
+      "shopUrl": "https://shop.scrammio.com/game-one"
+    },
+    {
+      "id": "game-two",
+      "title": "Featured Game Two",
+      "tagline": "Cooperative board game with a charming theme.",
+      "shortDesc": "Clever mechanics and a cute theme.",
+      "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Game+2",
+      "heroImage": "https://placehold.co/1200x514/2d5a3d/ffffff?text=Game+Two+Hero",
+      "about": "A cooperative experience for the whole family. Work together to win.",
+      "gameplay": "Each turn you play cards and move pieces. Coordinate to complete objectives before time runs out.",
+      "gameplayBullets": ["2–4 players", "Cooperative", "30–45 min"],
+      "gallery": ["https://placehold.co/400x400/2d5a3d/ffffff?text=1", "https://placehold.co/400x400/2d5a3d/ffffff?text=2"],
+      "shopUrl": "https://shop.scrammio.com/game-two"
+    },
+    {
+      "id": "game-three",
+      "title": "Featured Game Three",
+      "tagline": "Party card game for game night.",
+      "shortDesc": "Easy rules, big laughs.",
+      "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Game+3",
+      "heroImage": "https://placehold.co/1200x514/2d5a3d/ffffff?text=Game+Three+Hero",
+      "about": "The perfect party game. Simple to teach, endless fun.",
+      "gameplay": "Play cards, make choices, and watch the chaos unfold.",
+      "gameplayBullets": ["3–8 players", "15–20 min", "Party"],
+      "gallery": ["https://placehold.co/400x400/2d5a3d/ffffff?text=1", "https://placehold.co/400x400/2d5a3d/ffffff?text=2", "https://placehold.co/400x400/2d5a3d/ffffff?text=3"],
+      "shopUrl": "https://shop.scrammio.com/game-three"
+    },
+    {
+      "id": "game-four",
+      "title": "Featured Game Four",
+      "tagline": "Dice-rolling adventure.",
+      "shortDesc": "For the whole family.",
+      "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Game+4",
+      "heroImage": "https://placehold.co/1200x514/2d5a3d/ffffff?text=Game+Four+Hero",
+      "about": "Roll dice, explore, and collect treasures.",
+      "gameplay": "Push your luck or play it safe. Your choice each turn.",
+      "gameplayBullets": ["2–4 players", "30 min", "Family"],
+      "gallery": ["https://placehold.co/400x400/2d5a3d/ffffff?text=1"],
+      "shopUrl": "https://shop.scrammio.com/game-four"
+    },
+    {
+      "id": "game-five",
+      "title": "Featured Game Five",
+      "tagline": "Puzzle-style board game.",
+      "shortDesc": "With a twist.",
+      "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Game+5",
+      "heroImage": "https://placehold.co/1200x514/2d5a3d/ffffff?text=Game+Five+Hero",
+      "about": "Place tiles and solve the puzzle before your opponents.",
+      "gameplay": "Draft tiles and build your board. Most points wins.",
+      "gameplayBullets": ["2–4 players", "45 min", "Strategy"],
+      "gallery": ["https://placehold.co/400x400/2d5a3d/ffffff?text=1", "https://placehold.co/400x400/2d5a3d/ffffff?text=2"],
+      "shopUrl": "https://shop.scrammio.com/game-five"
+    },
+    {
+      "id": "game-six",
+      "title": "Featured Game Six",
+      "tagline": "Quick card game for 2–6 players.",
+      "shortDesc": "Perfect for travel.",
+      "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Game+6",
+      "heroImage": "https://placehold.co/1200x514/2d5a3d/ffffff?text=Game+Six+Hero",
+      "about": "Compact and fast. Great for holidays and cafes.",
+      "gameplay": "Play cards in order. First to empty their hand wins.",
+      "gameplayBullets": ["2–6 players", "10–15 min", "Portable"],
+      "gallery": ["https://placehold.co/400x400/2d5a3d/ffffff?text=1"],
+      "shopUrl": "https://shop.scrammio.com/game-six"
+    }
+  ],
+  "badges": [
+    { "id": "badge-1", "title": "Cute Enamel Badges", "shortDesc": "Small-batch enamel pins, designed with care.", "image": "https://placehold.co/600x400/4a7c59/ffffff?text=Badge+1", "shopUrl": "https://shop.scrammio.com/badge-one" },
+    { "id": "badge-2", "title": "Limited Editions", "shortDesc": "Seasonal and one-off designs for collectors.", "image": "https://placehold.co/600x400/4a7c59/ffffff?text=Badge+2", "shopUrl": "https://shop.scrammio.com/badge-two" },
+    { "id": "badge-3", "title": "Custom Streamer Badges", "shortDesc": "Bespoke enamel badges for streamers and creators.", "image": "https://placehold.co/600x400/4a7c59/ffffff?text=Badge+3", "shopUrl": "https://shop.scrammio.com/custom" },
+    { "id": "badge-4", "title": "Seasonal Drop", "shortDesc": "Limited-run designs for each season.", "image": "https://placehold.co/600x400/4a7c59/ffffff?text=Badge+4", "shopUrl": "https://shop.scrammio.com/badge-four" },
+    { "id": "badge-5", "title": "Character Pins", "shortDesc": "Cute characters in enamel. Collect the set.", "image": "https://placehold.co/600x400/4a7c59/ffffff?text=Badge+5", "shopUrl": "https://shop.scrammio.com/badge-five" },
+    { "id": "badge-6", "title": "Mascot Series", "shortDesc": "Our mascot in different poses and colours.", "image": "https://placehold.co/600x400/4a7c59/ffffff?text=Badge+6", "shopUrl": "https://shop.scrammio.com/badge-six" }
+  ],
+  "custom": [
+    { "id": "custom-1", "title": "Your Design, Our Craft", "shortDesc": "We turn your idea into a real enamel badge.", "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Custom+1", "linkUrl": "custom.html" },
+    { "id": "custom-2", "title": "Streamer & Creator Badges", "shortDesc": "Custom badges for your community or merch line.", "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Custom+2", "linkUrl": "custom.html" },
+    { "id": "custom-3", "title": "Event & Con Badges", "shortDesc": "Badges for conventions and special events.", "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Custom+3", "linkUrl": "custom.html" },
+    { "id": "custom-4", "title": "Brand & Merch", "shortDesc": "Custom enamel for your brand or product line.", "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Custom+4", "linkUrl": "custom.html" },
+    { "id": "custom-5", "title": "Small Runs", "shortDesc": "Minimum quantities that work for indie creators.", "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Custom+5", "linkUrl": "custom.html" },
+    { "id": "custom-6", "title": "Quote in 48 Hours", "shortDesc": "Fast turnaround on quotes. No obligation.", "image": "https://placehold.co/600x400/2d5a3d/ffffff?text=Custom+6", "linkUrl": "custom.html" }
+  ],
+  "prints": [
+    { "id": "print-1", "title": "Creative Objects", "shortDesc": "Desk toys, organisers, and one-off 3D printed creations.", "image": "https://placehold.co/600x400/3d6b4f/ffffff?text=Print+1", "shopUrl": "https://shop.scrammio.com/print-one" },
+    { "id": "print-2", "title": "Game Accessories", "shortDesc": "Inserts, organisers, and upgrades for tabletop games.", "image": "https://placehold.co/600x400/3d6b4f/ffffff?text=Print+2", "shopUrl": "https://shop.scrammio.com/print-two" },
+    { "id": "print-3", "title": "Prototypes & One-offs", "shortDesc": "From idea to physical object. Small runs and experiments.", "image": "https://placehold.co/600x400/3d6b4f/ffffff?text=Print+3", "shopUrl": "https://shop.scrammio.com/print-three" },
+    { "id": "print-4", "title": "Desk Toy", "shortDesc": "A small fidget-friendly object. Experimental runs.", "image": "https://placehold.co/600x400/3d6b4f/ffffff?text=Print+4", "shopUrl": "https://shop.scrammio.com/print-four" },
+    { "id": "print-5", "title": "Token Holder", "shortDesc": "Keeps game tokens organised on the table.", "image": "https://placehold.co/600x400/3d6b4f/ffffff?text=Print+5", "shopUrl": "https://shop.scrammio.com/print-five" },
+    { "id": "print-6", "title": "Miniature Stand", "shortDesc": "Sturdy stands for minis and display pieces.", "image": "https://placehold.co/600x400/3d6b4f/ffffff?text=Print+6", "shopUrl": "https://shop.scrammio.com/print-six" }
+  ]
+}

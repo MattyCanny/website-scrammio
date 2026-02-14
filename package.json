@@ -1,0 +1,11 @@
+{
+  "name": "website-scrammio",
+  "private": true,
+  "scripts": {
+    "dev": "serve . -p 3000",
+    "start": "serve . -p 3000"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

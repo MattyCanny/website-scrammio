@@ -1,0 +1,1038 @@
+/* ============================================
+   Scrammio – Design System
+   One visual language, four section energies
+   ============================================ */
+
+/* ---------- Reset / Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+ul, ol {
+  list-style-position: inside;
+}
+
+/* ---------- Variables ---------- */
+:root {
+  /* Brand colors: charcoal background, turquoise foreground/accent */
+  --bg: #454545;
+  --bg-card: #3d3d3d;
+  --bg-card-hover: #505050;
+  --text: #e8e8e8;
+  --text-muted: #b0b0b0;
+  --accent: #00E4D4;
+  --accent-hover: #00f5e4;
+  --accent-bright: #33e9dc;
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* Typography */
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-brand: "Montserrat", var(--font-sans);
+  --text-xs: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Radii & Shadows */
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Layout ---------- */
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.section {
+  margin-bottom: var(--space-3xl);
+}
+
+.section-title {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+  color: var(--text);
+  text-align: center;
+}
+
+/* ---------- Nav ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(69, 69, 69, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+/* Brand wordmark: SCRAMMIO – Montserrat, bold, uppercase, turquoise */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-brand);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+
+.nav-logo:hover {
+  color: var(--accent-hover);
+}
+
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  font-size: var(--text-base);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: var(--space-sm);
+  font-size: 1.5rem;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  margin-top: auto;
+  padding: var(--space-xl) var(--space-lg);
+  border-top: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-brand);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  text-decoration: none;
+}
+.footer-brand:hover {
+  color: var(--accent-hover);
+}
+.footer-logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.footer-copy {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.footer-shop {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ---------- Social banners (full width, stacked, below product sections) ---------- */
+.social-banners {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: var(--space-2xl);
+}
+
+/* Social banner colour themes (use these when you add real images) */
+.social-banner--tiktok {
+  --social-accent: #25F4EE;
+  --social-bg: #0a0a0a;
+}
+.social-banner--instagram {
+  --social-accent: #E4405F;
+  --social-bg: #3f1a2c;
+}
+.social-banner--facebook {
+  --social-accent: #1877F2;
+  --social-bg: #0d2d54;
+}
+
+.social-banner {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  transition: opacity 0.2s ease;
+  border-left: 4px solid var(--social-accent, var(--border));
+  position: relative;
+}
+
+.social-banner:hover {
+  opacity: 0.9;
+}
+
+.social-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+.social-banner-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-brand);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* ---------- Components: Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: var(--space-md) var(--space-xl);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--text);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Components: Cards ---------- */
+.card {
+  display: block;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.card .card-title,
+.card .card-desc {
+  color: var(--text);
+}
+.card .card-desc {
+  color: var(--text-muted);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-image {
+  aspect-ratio: 4 / 3;
+  background: var(--bg);
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-body {
+  padding: var(--space-lg);
+}
+
+.card-title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  color: var(--text);
+}
+
+.card-desc {
+  color: var(--text-muted);
+  font-size: var(--text-base);
+  margin-bottom: var(--space-md);
+}
+
+/* ---------- Page: Home ---------- */
+/* Hero with background image and overlay (full-width) */
+.page-home .hero {
+  position: relative;
+  min-height: 42vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 0;
+}
+
+.page-home .hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.page-home .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page-home .hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.6) 100%);
+  pointer-events: none;
+}
+
+.page-home .hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--space-3xl) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-home .hero-logo-img {
+  height: 160px;
+  width: auto;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.page-home .hero-logo {
+  font-family: var(--font-brand);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-md);
+  color: var(--accent);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.page-home .hero-tagline {
+  font-size: var(--text-xl);
+  color: var(--text-muted);
+  margin-bottom: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Homepage sections (anchor targets) */
+.home-section {
+  padding: var(--space-2xl) 0;
+  scroll-margin-top: 80px;
+}
+
+.product-section-empty {
+  display: none;
+}
+
+/* Full-width section with gradient background */
+.section-with-bg {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: var(--space-2xl) 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Section-specific gradients – each section has its own colour theme (cartoon-style) */
+
+/* Games – turquoise accent (brand) */
+.section-games .section-bg {
+  background:
+    radial-gradient(ellipse 90% 70% at 75% 25%, rgba(0, 228, 212, 0.25) 0%, rgba(0, 228, 212, 0.08) 45%, transparent 70%),
+    linear-gradient(155deg, rgba(0, 228, 212, 0.08) 0%, var(--bg) 25%, rgba(0, 228, 212, 0.12) 60%, var(--bg) 100%);
+}
+
+/* Badges – coral / warm pink (cute, collectible, friendly) */
+.section-badges .section-bg {
+  background:
+    radial-gradient(circle at 15% 45%, rgba(180, 95, 110, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 85% 55%, rgba(200, 115, 130, 0.35) 0%, transparent 50%),
+    linear-gradient(165deg, var(--bg) 0%, rgba(120, 55, 70, 0.35) 50%, var(--bg) 100%);
+}
+
+/* Custom – soft blue (trust, calm, professional) */
+.section-custom .section-bg {
+  background:
+    radial-gradient(ellipse 120% 100% at 50% 0%, rgba(70, 120, 150, 0.5) 0%, rgba(50, 90, 120, 0.2) 40%, transparent 65%),
+    linear-gradient(180deg, rgba(35, 60, 80, 0.3) 0%, var(--bg) 30%, rgba(55, 95, 125, 0.25) 70%, var(--bg) 100%);
+}
+
+/* 3D Prints – amber / warm gold (maker, inventive, craft) */
+.section-prints .section-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 25% 75%, rgba(160, 120, 60, 0.45) 0%, transparent 55%),
+    linear-gradient(250deg, var(--bg) 0%, rgba(90, 70, 35, 0.4) 35%, rgba(140, 105, 55, 0.2) 70%, var(--bg) 100%);
+}
+
+.section-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* Section theme colours – each section has its own accent (no turquoise bleed) */
+.section-games,
+.page-games {
+  --section-accent: #00E4D4;
+  --section-accent-hover: #00f5e4;
+}
+.section-badges,
+.page-badges {
+  --section-accent: #e8a0a8;
+  --section-accent-hover: #f0b0b8;
+}
+.section-custom,
+.page-custom {
+  --section-accent: #7eb8d4;
+  --section-accent-hover: #8fc4de;
+}
+.section-prints,
+.page-prints {
+  --section-accent: #d4b84a;
+  --section-accent-hover: #e0c65a;
+}
+
+/* Section title colours */
+.section-games .section-title,
+.page-games .section-title {
+  color: var(--section-accent);
+}
+.section-badges .section-title,
+.page-badges .section-title {
+  color: var(--section-accent);
+}
+.section-custom .section-title,
+.page-custom .section-title {
+  color: var(--section-accent);
+}
+.section-prints .section-title,
+.page-prints .section-title {
+  color: var(--section-accent);
+}
+
+/* Links and buttons inside each section use section accent */
+.section-games a:not(.nav-logo):not(.nav-links a),
+.section-badges a:not(.nav-logo):not(.nav-links a),
+.section-custom a:not(.nav-logo):not(.nav-links a),
+.section-prints a:not(.nav-logo):not(.nav-links a) {
+  color: var(--section-accent);
+}
+.section-games a:not(.nav-logo):not(.nav-links a):hover,
+.section-badges a:not(.nav-logo):not(.nav-links a):hover,
+.section-custom a:not(.nav-logo):not(.nav-links a):hover,
+.section-prints a:not(.nav-logo):not(.nav-links a):hover {
+  color: var(--section-accent-hover);
+}
+.section-games .btn-primary,
+.section-badges .btn-primary,
+.section-custom .btn-primary,
+.section-prints .btn-primary {
+  background: var(--section-accent);
+  color: #fff;
+}
+/* Override section link colour so button text stays white (link rule has high specificity) */
+.section-games .section-inner .mt-lg a.btn-primary,
+.section-badges .section-inner .mt-lg a.btn-primary,
+.section-custom .section-inner .mt-lg a.btn-primary,
+.section-prints .section-inner .mt-lg a.btn-primary {
+  color: #fff;
+}
+.section-games .btn-primary:hover,
+.section-badges .btn-primary:hover,
+.section-custom .btn-primary:hover,
+.section-prints .btn-primary:hover {
+  background: var(--section-accent-hover);
+  color: #fff;
+}
+.section-games .section-inner .mt-lg a.btn-primary:hover,
+.section-badges .section-inner .mt-lg a.btn-primary:hover,
+.section-custom .section-inner .mt-lg a.btn-primary:hover,
+.section-prints .section-inner .mt-lg a.btn-primary:hover {
+  color: #fff;
+}
+.section-games .scroll-arrow:hover,
+.section-badges .scroll-arrow:hover,
+.section-custom .scroll-arrow:hover,
+.section-prints .scroll-arrow:hover {
+  background: var(--section-accent);
+  border-color: var(--section-accent);
+}
+.section-games .cards-scroll {
+  scrollbar-color: var(--section-accent) transparent;
+}
+.section-badges .cards-scroll {
+  scrollbar-color: var(--section-accent) transparent;
+}
+.section-custom .cards-scroll {
+  scrollbar-color: var(--section-accent) transparent;
+}
+.section-prints .cards-scroll {
+  scrollbar-color: var(--section-accent) transparent;
+}
+.section-games .cards-scroll::-webkit-scrollbar-thumb,
+.section-badges .cards-scroll::-webkit-scrollbar-thumb,
+.section-custom .cards-scroll::-webkit-scrollbar-thumb,
+.section-prints .cards-scroll::-webkit-scrollbar-thumb {
+  background: var(--section-accent);
+}
+
+/* Category pages: main content links and buttons use page theme */
+.page-games .main a,
+.page-badges .main a,
+.page-custom .main a,
+.page-prints .main a {
+  color: var(--section-accent);
+}
+.page-games .main a:hover,
+.page-badges .main a:hover,
+.page-custom .main a:hover,
+.page-prints .main a:hover {
+  color: var(--section-accent-hover);
+}
+.page-games .main .btn-primary,
+.page-badges .main .btn-primary,
+.page-custom .main .btn-primary,
+.page-prints .main .btn-primary {
+  background: var(--section-accent);
+  color: #fff;
+}
+.page-games .main .btn-primary:hover,
+.page-badges .main .btn-primary:hover,
+.page-custom .main .btn-primary:hover,
+.page-prints .main .btn-primary:hover {
+  background: var(--section-accent-hover);
+  color: #fff;
+}
+.page-badges .custom-streamer-block {
+  border-color: var(--section-accent);
+}
+.page-custom .process-step {
+  border-left-color: var(--section-accent);
+}
+
+.section-inner > p.mt-lg {
+  text-align: center;
+}
+
+/* Horizontal scrollable cards + arrows – full page width */
+.cards-scroll-wrapper {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.cards-scroll {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  gap: var(--space-lg);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: var(--space-sm) 0;
+  /* Hide scrollbar visually but keep scrollable */
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.cards-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.cards-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cards-scroll::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.cards-scroll .card-scroll-item {
+  flex: 0 0 auto;
+  width: min(320px, 85vw);
+  scroll-snap-align: start;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: scale(var(--peek-scale, 1));
+}
+
+.cards-scroll .card-scroll-item:hover {
+  opacity: 1 !important;
+  transform: scale(1) translateY(-4px) !important;
+}
+
+.scroll-arrow {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-arrow:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.scroll-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.scroll-arrow:disabled:hover {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+.home-section .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-xl);
+}
+
+/* ---------- Page: Games (premium) ---------- */
+.page-games .section-title {
+  font-size: var(--text-3xl);
+}
+
+.page-games .card {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.page-games .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-2xl);
+}
+
+.page-games .card-title {
+  font-size: var(--text-xl);
+}
+
+/* ---------- Page: Game template (individual game) ---------- */
+.page-game .game-hero {
+  position: relative;
+  margin: calc(-1 * var(--space-xl)) calc(-1 * var(--space-lg)) var(--space-2xl);
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.page-game .game-hero-image {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  background: var(--bg);
+}
+
+.page-game .game-hero-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-2xl) var(--space-lg);
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: var(--text);
+}
+
+.page-game .game-title {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+}
+
+.page-game .game-tagline {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+}
+
+.page-game .game-about,
+.page-game .game-gameplay {
+  margin-bottom: var(--space-2xl);
+}
+
+.page-game .game-about h2,
+.page-game .game-gameplay h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-md);
+  color: var(--text);
+}
+
+.page-game .game-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.page-game .game-gallery img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.page-game .game-cta {
+  margin-top: var(--space-xl);
+}
+
+/* ---------- Page: Badges (playful) ---------- */
+.page-badges .section-title {
+  font-size: var(--text-2xl);
+}
+
+.page-badges .card {
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border);
+}
+
+.page-badges .badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-lg);
+}
+
+.page-badges .badge-card {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page-badges .badge-card .card-image {
+  aspect-ratio: 1;
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.page-badges .badge-card .card-title {
+  font-size: var(--text-base);
+}
+
+.custom-streamer-block {
+  margin-top: var(--space-2xl);
+  padding: var(--space-xl);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--accent);
+  text-align: center;
+}
+
+.custom-streamer-block .section-title {
+  margin-bottom: var(--space-md);
+}
+
+.custom-streamer-block p {
+  color: var(--text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+/* ---------- Page: Custom (trustworthy) ---------- */
+.page-custom .main {
+  max-width: 720px;
+}
+
+.page-custom .process-steps {
+  margin: var(--space-xl) 0;
+}
+
+.page-custom .process-step {
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--accent);
+}
+
+.page-custom .process-step h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-sm);
+  color: var(--text);
+}
+
+.page-custom .process-step p {
+  color: var(--text-muted);
+}
+
+.page-custom .cta-block {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+/* ---------- Page: 3D Prints (inventive) ---------- */
+.page-prints .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-xl);
+}
+
+.page-prints .card {
+  border: 1px solid var(--border);
+}
+
+.page-prints .card-image {
+  aspect-ratio: 1;
+}
+
+/* ---------- Utilities ---------- */
+.mt-lg {
+  margin-top: var(--space-lg);
+}
+
+.mb-xl {
+  margin-bottom: var(--space-xl);
+}
+
+.mt-2xl {
+  margin-top: var(--space-2xl);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Media queries ---------- */
+@media (max-width: 1024px) {
+  .page-game .game-hero-content {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .page-game .game-title {
+    font-size: var(--text-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--bg);
+    padding: var(--space-lg);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .page-home .hero {
+    min-height: 36vh;
+  }
+
+  .page-home .hero-logo-img {
+    height: 112px;
+  }
+
+  .page-home .hero-logo {
+    font-size: var(--text-3xl);
+  }
+
+  .page-home .hero-tagline {
+    font-size: var(--text-lg);
+  }
+
+  .page-game .game-hero {
+    margin-left: calc(-1 * var(--space-lg));
+    margin-right: calc(-1 * var(--space-lg));
+  }
+
+  .page-game .game-hero-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .page-game .game-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .page-game .game-title {
+    font-size: var(--text-xl);
+  }
+
+  .page-game .game-tagline {
+    font-size: var(--text-base);
+  }
+}
